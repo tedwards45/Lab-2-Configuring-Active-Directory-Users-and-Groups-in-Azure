@@ -148,29 +148,25 @@ yourdomain.com
 
 └── OU=Devices
 
-     ├── OU=IT_Computers
+├── OU=IT_Computers
      
-     ├── OU=Faculty_Computers
+├── OU=Faculty_Computers
      
-     └── OU=Student_Computers
+└── OU=Student_Computers
 
 
 Then, move computers out of the default Computers container and into your custom OUs.
 
 You can do this manually in Active Directory Users and Computers (ADUC)
 
-
-# Redirect default computers container to a custom OU
-redircmp "OU=Devices,DC=yourdomain,DC=com"
-
-
-Now, any new computer that joins the domain will land in your “Devices” OU instead of the built-in “Computers” container — which helps maintain your sync structure and GPO management.
-
 🌐 Summary (Hybrid Context)
-Location	Description	Syncs to Azure AD?
-CN=Computers	Default container for new domain-joined computers	❌ Not by default
-OU=Devices	Custom OU you create for computers	✅ If selected in Azure AD Connect
-OU=Syncing OU	OU chosen during Azure AD Connect setup	✅ Actively synced to Azure
+| Location          | Description                                       | Syncs to Azure AD?                |
+| ----------------- | ------------------------------------------------- | --------------------------------- |
+| **CN=Computers**  | Default container for new domain-joined computers | ❌ Not by default                  |
+| **OU=Devices**    | Custom OU you create for computers                | ✅ If selected in Azure AD Connect |
+| **OU=Syncing OU** | OU chosen during Azure AD Connect setup           | ✅ Actively synced to Azure        |
+
+
 💡 Key Takeaway
 
 In a hybrid Active Directory:
@@ -180,6 +176,8 @@ The default Computers container is just a temporary holding place.
 You should move or redirect computers to a custom, syncing OU.
 
 This ensures device management, GPOs, and Azure sync all work correctly across both environments.
+
+**Remember to always delete your resource group to avoid getting charged a lot of money**
 
 
     
