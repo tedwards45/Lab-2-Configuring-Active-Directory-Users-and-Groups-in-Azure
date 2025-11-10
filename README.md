@@ -9,9 +9,7 @@ This lab demonstrates how to configure **Active Directory (AD) Users and Groups*
 ### Objectives
 - Create Organizational Units (OUs)
 - Create users
-- Create security and distribution groups
 - Add users to groups
-- Verify membership using GUI and PowerShell
 
 > **Note:** This lab assumes a Domain Controller is already running in Azure (from Lab 1).
 
