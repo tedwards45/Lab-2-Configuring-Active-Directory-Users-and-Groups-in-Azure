@@ -34,7 +34,7 @@ This lab demonstrates how to configure **Active Directory (AD) Users and Groups*
 ### Step 2: Open Active Directory Users and Computers (ADUC)
 - Click **Start → Server Manager → Tools → Active Directory Users and Computers**
 
-![Step 2 Screenshot](screenshots/step2_aduc_open.png)
+![Step 2 Screenshot]
 
 ---
 
